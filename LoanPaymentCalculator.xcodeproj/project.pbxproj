@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		983857892D3E9B2C0070B7FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983857832D3E9B2C0070B7FC /* Preview Assets.xcassets */; };
+		9838578A2D3E9B2C0070B7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983857852D3E9B2C0070B7FC /* Assets.xcassets */; };
+		9838578B2D3E9B2C0070B7FC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983857862D3E9B2C0070B7FC /* CalculatorView.swift */; };
+		9838578C2D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983857872D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		983857722D3E9AC60070B7FC /* LoanPaymentCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoanPaymentCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		983857832D3E9B2C0070B7FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		983857852D3E9B2C0070B7FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		983857862D3E9B2C0070B7FC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		983857872D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanPaymentCalculatorApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		983857742D3E9AC60070B7FC /* LoanPaymentCalculator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LoanPaymentCalculator;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9838576F2D3E9AC60070B7FC /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		983857692D3E9AC60070B7FC = {
 			isa = PBXGroup;
 			children = (
-				983857742D3E9AC60070B7FC /* LoanPaymentCalculator */,
+				983857882D3E9B2C0070B7FC /* LoanPaymentCalculator */,
 				983857732D3E9AC60070B7FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,25 @@
 				983857722D3E9AC60070B7FC /* LoanPaymentCalculator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		983857842D3E9B2C0070B7FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				983857832D3E9B2C0070B7FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		983857882D3E9B2C0070B7FC /* LoanPaymentCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				983857842D3E9B2C0070B7FC /* Preview Content */,
+				983857852D3E9B2C0070B7FC /* Assets.xcassets */,
+				983857862D3E9B2C0070B7FC /* CalculatorView.swift */,
+				983857872D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift */,
+			);
+			path = LoanPaymentCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +81,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				983857742D3E9AC60070B7FC /* LoanPaymentCalculator */,
 			);
 			name = LoanPaymentCalculator;
 			packageProductDependencies = (
@@ -109,6 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983857892D3E9B2C0070B7FC /* Preview Assets.xcassets in Resources */,
+				9838578A2D3E9B2C0070B7FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9838578B2D3E9B2C0070B7FC /* CalculatorView.swift in Sources */,
+				9838578C2D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
