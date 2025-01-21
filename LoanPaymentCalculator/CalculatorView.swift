@@ -10,13 +10,12 @@ import SwiftUI
 struct CalculatorView: View {
     
     //MARK: stored properties
-    //feedback to user
     @State var givenInput  = ""
     @State var feedback  = ""
     //must need condition
-    @State var loanRatio = Double.self
-    @State var years = Double.self
-    @State var loanAmount = Double.self
+    @State var loanRatio = ""
+    @State var years = ""
+    @State var loanAmount = ""
     
     //MARK: computed properties
    
@@ -25,11 +24,13 @@ struct CalculatorView: View {
             VStack (spacing:30){
               Text("This is a Loan payment Calulator")
                 Text("Enter values to see what you have to pay per month!")
-                TextField("Loan amount", text: $givenInput)
+                TextField("Loan amount", text: $loanAmount)
+                TextField("Loan time", text: $years)
+                TextField("Loan ratio", text: $loanRatio)
                 
             }
         
-        .padding()
+     
         .navigationTitle("Loan Payment Calculator")
         }
     }
