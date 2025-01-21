@@ -9,13 +9,14 @@ import SwiftUI
 
 struct CalculatorView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            VStack {
+              Text("This is a Loan payment Calulator")
+                Text("Enter values to see what you have to pay per month!")
+            }
         }
         .padding()
+        .navigationTitle("Loan Payment Calculator")
     }
 }
 
