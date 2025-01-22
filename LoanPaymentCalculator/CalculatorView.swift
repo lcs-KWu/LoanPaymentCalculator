@@ -25,8 +25,11 @@ struct CalculatorView: View {
               let loanAmountInt = Double(loanAmount)
         else {
             feedback = "Please provide an integer."
+            return ""
         }
-        return loanAmountInt * loanRatioInt * yearsInt / 12
+        let answer = loanAmountInt + (loanAmountInt * loanRatioInt * yearsInt) / 12
+        return ""
+        
     }
     var  body: some View {
         NavigationStack{
@@ -36,14 +39,37 @@ struct CalculatorView: View {
                 TextField("Loan amount", text: $loanAmount)
                 TextField("Loan time", text: $years)
                 TextField("Loan ratio", text: $loanRatio)
-                Text("\(result)")
+                Button {
+                    checkPayment()
+                } label: {
+                    Text("Check Your Payment")
+                }
+                .buttonStyle(.borderedProminent)
+                Text(feedback)
+                    .font(
+                        .custom(
+                            "BradleyHandITCTT-Bold",
+                            size: 24.0,
+                            relativeTo: .title3
+                        )
+                    )
+                
             }
             
             
             .navigationTitle("Loan Payment Calculator")
         }
     }
-    
+    func checkPayment() {
+        guard let loanRatioInt = Double(loanRatio),
+              let yearsInt = Double(years),
+              let loanAmountInt = Double(loanAmount)
+        else {
+            feedback = "Please provide an integer."
+            return
+        }
+        feedback = "You have to pay \(result) per month!"
+    }
 }
     
     
