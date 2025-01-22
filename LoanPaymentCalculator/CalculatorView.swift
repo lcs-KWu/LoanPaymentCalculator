@@ -19,9 +19,14 @@ struct CalculatorView: View {
     
     
     //MARK: computed properties
-    var result : Double {
-        
-        return loanAmount * loanRatio * years / 12
+    var result : String {
+        guard let loanRatioInt = Double(loanRatio),
+              let yearsInt = Double(years),
+              let loanAmountInt = Double(loanAmount)
+        else {
+            feedback = "Please provide an integer."
+        }
+        return loanAmountInt * loanRatioInt * yearsInt / 12
     }
     var  body: some View {
         NavigationStack{
@@ -38,25 +43,12 @@ struct CalculatorView: View {
             .navigationTitle("Loan Payment Calculator")
         }
     }
-    func CheckInput(){
-        guard let loanRatioInt = Double(loanRatio) else {
-            feedback = "Please provide an integer."
-            return
-        }
-        guard let loanAmountInt = Double(loanAmount)  else {
-            feedback = "Please provide an integer."
-            return
-        }
-        guard let loanYearInt = Double(years)  else {
-            feedback = "Please provide an integer."
-            return
-        }
+    
+}
+    
+    
+    
+    
+    #Preview {
+        CalculatorView()
     }
-   
-}
-
-
-
-#Preview {
-    CalculatorView()
-}
