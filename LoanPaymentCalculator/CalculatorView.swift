@@ -63,7 +63,15 @@ struct CalculatorView: View {
             
             
             .navigationTitle("Loan Payment Calculator")
-        }
+            .font(
+                .custom(
+                    "BradleyHandITCTT-Bold",
+                    size: 24.0,
+                    relativeTo: .title3
+                )
+            )
+            
+        }.padding()
     }
     func checkPayment() {
         guard let loanRatioInt = Double(loanRatio),
