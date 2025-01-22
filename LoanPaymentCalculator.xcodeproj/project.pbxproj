@@ -11,6 +11,7 @@
 		9838578A2D3E9B2C0070B7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983857852D3E9B2C0070B7FC /* Assets.xcassets */; };
 		9838578B2D3E9B2C0070B7FC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983857862D3E9B2C0070B7FC /* CalculatorView.swift */; };
 		9838578C2D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983857872D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift */; };
+		983857E12D415CE20070B7FC /* HistoryResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983857E02D415CE20070B7FC /* HistoryResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		983857852D3E9B2C0070B7FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		983857862D3E9B2C0070B7FC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		983857872D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanPaymentCalculatorApp.swift; sourceTree = "<group>"; };
+		983857E02D415CE20070B7FC /* HistoryResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +61,21 @@
 		983857882D3E9B2C0070B7FC /* LoanPaymentCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				983857DF2D415CB60070B7FC /* Model */,
 				983857842D3E9B2C0070B7FC /* Preview Content */,
 				983857852D3E9B2C0070B7FC /* Assets.xcassets */,
 				983857862D3E9B2C0070B7FC /* CalculatorView.swift */,
 				983857872D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift */,
 			);
 			path = LoanPaymentCalculator;
+			sourceTree = "<group>";
+		};
+		983857DF2D415CB60070B7FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				983857E02D415CE20070B7FC /* HistoryResults.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9838578B2D3E9B2C0070B7FC /* CalculatorView.swift in Sources */,
+				983857E12D415CE20070B7FC /* HistoryResults.swift in Sources */,
 				9838578C2D3E9B2C0070B7FC /* LoanPaymentCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

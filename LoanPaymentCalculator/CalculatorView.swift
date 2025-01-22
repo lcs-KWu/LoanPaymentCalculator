@@ -10,13 +10,13 @@ import SwiftUI
 struct CalculatorView: View {
     
     //MARK: stored properties
-    @State var givenInput  = ""
     @State var feedback  = ""
     //must need condition
     @State var loanRatio = ""
     @State var years = ""
     @State var loanAmount = ""
-    
+    // List of prior results
+    @State var priorResults: [HistoryResults] = []
     
     //MARK: computed properties
     var result : String {
@@ -27,8 +27,8 @@ struct CalculatorView: View {
             feedback = "Please provide an integer."
             return ""
         }
-        let answer = loanAmountInt + (loanAmountInt * loanRatioInt * yearsInt) / 12
-        return ""
+        let answer = (loanAmountInt + (loanAmountInt * loanRatioInt * yearsInt)) / 12
+        return "\(answer)"
         
     }
     var  body: some View {
@@ -53,7 +53,12 @@ struct CalculatorView: View {
                             relativeTo: .title3
                         )
                     )
-                
+                Button(action: {
+                    let lastresult = HistoryResults(Anwser: " \(result)")
+                    priorResults.append(lastresult)
+                },label: {
+                    Text("Save Result")
+                })
             }
             
             
@@ -71,10 +76,10 @@ struct CalculatorView: View {
         feedback = "You have to pay \(result) per month!"
     }
 }
-    
-    
-    
-    
-    #Preview {
-        CalculatorView()
-    }
+
+
+
+
+#Preview {
+    CalculatorView()
+}
